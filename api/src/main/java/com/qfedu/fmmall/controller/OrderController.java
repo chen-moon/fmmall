@@ -51,7 +51,7 @@ public class OrderController {
             // data.put("total_fee",order.getActualAmount()*100+"");           //支付金额
             data.put("total_fee","1");           //支付金额
             data.put("trade_type","NATIVE");        //支付类型
-            data.put("notify_url","http://chenmy.free.idcfengye.com/pay/callback");  //设置支付完成时的回调方法接口
+            data.put("notify_url","http://8.130.103.175:8080/pay/callback");  //设置支付完成时的回调方法接口
             Map<String, String> resp = wxPay.unifiedOrder(data);
             orderInfo.put("payUrl",resp.get("code_url"));
             resultVO = new ResultVO(ResStatus.OK,"交易成功!",orderInfo);
